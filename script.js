@@ -44,11 +44,15 @@ function initParticles() {
     if (!canvas) return;
     
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Limit canvas size for better performance
+    const maxWidth = 1920;
+    const maxHeight = 1080;
+    canvas.width = Math.min(window.innerWidth, maxWidth);
+    canvas.height = Math.min(window.innerHeight, maxHeight);
     
     const particles = [];
-    const particleCount = 50;
+    // Adjust particle count based on screen size
+    const particleCount = window.innerWidth < 768 ? 30 : 50;
     
     class Particle {
         constructor() {
@@ -111,8 +115,8 @@ function initParticles() {
     animateParticles();
     
     window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = Math.min(window.innerWidth, maxWidth);
+        canvas.height = Math.min(window.innerHeight, maxHeight);
     });
 }
 
@@ -312,11 +316,20 @@ if (contactForm) {
         // Here you would normally send the form data to a server
         console.log('Form submitted:', formData);
         
-        // Show success message (you can customize this)
-        alert('Thank you for your message! I will get back to you soon.');
+        // Show inline success message
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.innerHTML;
+        submitButton.innerHTML = '<span>✓</span> Message Sent!';
+        submitButton.style.backgroundColor = '#10b981';
+        submitButton.disabled = true;
         
-        // Reset form
-        contactForm.reset();
+        // Reset form after delay
+        setTimeout(() => {
+            contactForm.reset();
+            submitButton.innerHTML = originalText;
+            submitButton.style.backgroundColor = '';
+            submitButton.disabled = false;
+        }, 3000);
     });
 }
 
@@ -331,13 +344,17 @@ if (scrollIndicator) {
     });
 }
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
+// Add parallax effect to hero section (throttled for performance)
+const parallaxScroll = throttle(() => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
     
     if (heroContent && scrolled < window.innerHeight) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+        requestAnimationFrame(() => {
+            heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+            heroContent.style.opacity = 1 - (scrolled / window.innerHeight);
+        });
     }
-});
+}, 16); // Approximately 60fps
+
+window.addEventListener('scroll', parallaxScroll);
