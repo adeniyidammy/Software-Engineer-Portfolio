@@ -34,17 +34,51 @@ navLinks.forEach(link => {
     });
 });
 
-// Add active class to navigation links on scroll
-window.addEventListener('scroll', () => {
+// Add scroll effect to navbar and handle active navigation links
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+// Throttle function to limit execution frequency
+function throttle(func, delay) {
+    let timeoutId;
+    let lastExecTime = 0;
+    
+    return function(...args) {
+        const currentTime = Date.now();
+        
+        if (currentTime - lastExecTime < delay) {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                lastExecTime = currentTime;
+                func.apply(this, args);
+            }, delay);
+        } else {
+            lastExecTime = currentTime;
+            func.apply(this, args);
+        }
+    };
+}
+
+// Combined scroll handler
+const handleScroll = () => {
+    const currentScroll = window.pageYOffset;
+    
+    // Update navbar shadow
+    if (currentScroll > 100) {
+        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+    } else {
+        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+    }
+    
+    // Update active navigation link
     let current = '';
     const sections = document.querySelectorAll('section');
-    const navHeight = document.querySelector('.navbar').offsetHeight;
+    const navHeight = navbar.offsetHeight;
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop - navHeight - 100;
-        const sectionHeight = section.clientHeight;
         
-        if (window.pageYOffset >= sectionTop) {
+        if (currentScroll >= sectionTop) {
             current = section.getAttribute('id');
         }
     });
@@ -55,23 +89,12 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
-});
-
-// Add scroll effect to navbar
-let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
-    } else {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
-    }
     
     lastScroll = currentScroll;
-});
+};
+
+// Use throttled scroll handler
+window.addEventListener('scroll', throttle(handleScroll, 100));
 
 // Animate elements on scroll
 const observerOptions = {
@@ -116,4 +139,12 @@ document.querySelectorAll('a[href^="http"]').forEach(link => {
             e.preventDefault();
         }
     });
+});
+
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
