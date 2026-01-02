@@ -31,12 +31,33 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <canvas id="particleCanvas"></canvas>
+        </div>
         <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm a Software Engineer</h1>
-            <p class="hero-subtitle">Building elegant solutions to complex problems</p>
+            <div class="hero-greeting">👋 Hello, I'm</div>
+            <h1 class="hero-title">
+                <span class="name-highlight">Software Engineer</span>
+            </h1>
+            <div class="hero-subtitle-wrapper">
+                <p class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+            </div>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">
+                    <span class="btn-icon">🚀</span>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span class="btn-icon">✉️</span>
+                    Contact Me
+                </a>
+            </div>
+            <div class="scroll-indicator">
+                <span>↓</span>
             </div>
         </div>
     </section>
@@ -46,17 +67,52 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
+                <div class="about-image">
+                    <div class="profile-picture">
+                        <span class="profile-icon">👨‍💻</span>
+                    </div>
+                    <div class="experience-badge">
+                        <div class="badge-content">
+                            <span class="badge-number">5+</span>
+                            <span class="badge-text">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="about-text">
+                    <h3 class="about-subtitle">Crafting Digital Experiences</h3>
                     <p>
                         I'm a passionate software engineer with a strong foundation in building 
                         scalable and efficient applications. I enjoy solving complex problems and 
-                        creating user-friendly experiences.
+                        creating user-friendly experiences that make a difference.
                     </p>
                     <p>
                         With expertise in modern technologies and best practices, I strive to deliver 
                         high-quality code and contribute to innovative projects. I'm always eager to 
                         learn new technologies and improve my skills.
                     </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">💻</span>
+                            <div class="stat-info">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">👥</span>
+                            <div class="stat-info">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🏆</span>
+                            <div class="stat-info">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Awards Won</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,27 +121,112 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Frontend Development</h3>
-                    <p>HTML, CSS, JavaScript, React, Vue.js</p>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">💻</span>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>React.js</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>JavaScript/TypeScript</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span class="skill-percentage">98%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="98"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Python, Java, C#, SQL</p>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">⚙️</span>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Node.js</span>
+                                <span class="skill-percentage">88%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Python</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>SQL/NoSQL</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">☁️</div>
-                    <h3>Cloud & DevOps</h3>
-                    <p>AWS, Azure, Docker, CI/CD</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Tools & Practices</h3>
-                    <p>Git, Agile, Testing, Design Patterns</p>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-icon">☁️</span>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>AWS</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>Docker/Kubernetes</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>CI/CD Pipelines</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,55 +239,112 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">📱</div>
+                        <div class="project-overlay">
+                            <div class="project-quick-links">
+                                <a href="#" class="quick-link" title="View Demo">
+                                    <span>🔗</span>
+                                </a>
+                                <a href="#" class="quick-link" title="View Code">
+                                    <span>💻</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span class="project-emoji">📱</span>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3>Project One</h3>
+                        <div class="project-header">
+                            <h3>Modern Web App</h3>
+                            <span class="project-status">Featured</span>
+                        </div>
                         <p>A responsive web application built with modern technologies. Features include user authentication, real-time updates, and intuitive UI.</p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag"><span class="tag-icon">⚛️</span> React</span>
+                            <span class="tag"><span class="tag-icon">🟢</span> Node.js</span>
+                            <span class="tag"><span class="tag-icon">🍃</span> MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">Source Code</a>
+                            <a href="#" class="project-link">
+                                <span>👁️</span> View Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <span>💻</span> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🚀</div>
+                        <div class="project-overlay">
+                            <div class="project-quick-links">
+                                <a href="#" class="quick-link" title="View Demo">
+                                    <span>🔗</span>
+                                </a>
+                                <a href="#" class="quick-link" title="View Code">
+                                    <span>💻</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span class="project-emoji">🚀</span>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3>Project Two</h3>
+                        <div class="project-header">
+                            <h3>API Service Platform</h3>
+                            <span class="project-status status-success">Live</span>
+                        </div>
                         <p>An API service that handles complex data processing and provides RESTful endpoints. Scalable architecture with comprehensive testing.</p>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">PostgreSQL</span>
+                            <span class="tag"><span class="tag-icon">🐍</span> Python</span>
+                            <span class="tag"><span class="tag-icon">⚡</span> FastAPI</span>
+                            <span class="tag"><span class="tag-icon">🐘</span> PostgreSQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">Source Code</a>
+                            <a href="#" class="project-link">
+                                <span>👁️</span> View Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <span>💻</span> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">🎨</div>
+                        <div class="project-overlay">
+                            <div class="project-quick-links">
+                                <a href="#" class="quick-link" title="View Demo">
+                                    <span>🔗</span>
+                                </a>
+                                <a href="#" class="quick-link" title="View Code">
+                                    <span>💻</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <span class="project-emoji">🎨</span>
+                        </div>
                     </div>
                     <div class="project-info">
-                        <h3>Project Three</h3>
+                        <div class="project-header">
+                            <h3>Design System</h3>
+                            <span class="project-status status-progress">In Progress</span>
+                        </div>
                         <p>A design system and component library built for scalability and reusability. Includes documentation and interactive examples.</p>
                         <div class="project-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Storybook</span>
+                            <span class="tag"><span class="tag-icon">📘</span> TypeScript</span>
+                            <span class="tag"><span class="tag-icon">💚</span> Vue.js</span>
+                            <span class="tag"><span class="tag-icon">📚</span> Storybook</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">Source Code</a>
+                            <a href="#" class="project-link">
+                                <span>👁️</span> View Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <span>💻</span> Source Code
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -159,23 +357,70 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
-                <p class="contact-text">
-                    I'm always interested in hearing about new opportunities and projects. 
-                    Feel free to reach out if you'd like to connect!
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:your.email@example.com" class="contact-link">
-                        <span class="contact-icon">📧</span>
-                        Email
-                    </a>
-                    <a href="https://github.com/yourusername" target="_blank" class="contact-link">
-                        <span class="contact-icon">💼</span>
-                        GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-link">
-                        <span class="contact-icon">🔗</span>
-                        LinkedIn
-                    </a>
+                <div class="contact-info-section">
+                    <h3 class="contact-subtitle">Let's Build Something Amazing Together</h3>
+                    <p class="contact-text">
+                        I'm always interested in hearing about new opportunities and projects. 
+                        Whether you have a question or just want to say hi, feel free to reach out!
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <span class="contact-icon">📧</span>
+                            <div class="detail-content">
+                                <span class="detail-label">Email</span>
+                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-icon">📍</span>
+                            <div class="detail-content">
+                                <span class="detail-label">Location</span>
+                                <span>Available for Remote Work</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank" class="social-link" title="GitHub">
+                            <span>💻</span>
+                        </a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link" title="LinkedIn">
+                            <span>💼</span>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" class="social-link" title="Twitter">
+                            <span>🐦</span>
+                        </a>
+                        <a href="https://stackoverflow.com/users/yourprofile" target="_blank" class="social-link" title="Stack Overflow">
+                            <span>📚</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-section">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
+                            <span class="form-icon">👤</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
+                            <span class="form-icon">📧</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
+                            <span class="form-icon">🏷️</span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="form-icon">💬</span>
+                        </div>
+                        <button type="submit" class="btn btn-submit">
+                            <span>✉️</span>
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
