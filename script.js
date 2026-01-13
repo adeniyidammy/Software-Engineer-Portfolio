@@ -1,9 +1,9 @@
 // Typing animation
 const typingTexts = [
-    "Building elegant solutions to complex problems",
-    "Creating beautiful user experiences",
-    "Full-stack software engineer",
-    "Passionate about clean code"
+    "Software Engineer (.NET)",
+    "Azure Developer Associate",
+    "Cloud & API Developer",
+    "Agile .NET Core Delivery"
 ];
 
 let textIndex = 0;
@@ -230,25 +230,27 @@ function animateSkillBars() {
     });
 }
 
-// Intersection Observer for scroll animations
+// Intersection Observer for scroll animations with graceful fallback
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            
-            // Trigger skill bar animation when skills section is visible
-            if (entry.target.classList.contains('skills')) {
-                animateSkillBars();
+const observer = ('IntersectionObserver' in window)
+    ? new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                
+                // Trigger skill bar animation when skills section is visible
+                if (entry.target.classList.contains('skills')) {
+                    animateSkillBars();
+                }
             }
-        }
-    });
-}, observerOptions);
+        });
+    }, observerOptions)
+    : null;
 
 // Initialize animations on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -264,7 +266,13 @@ document.addEventListener('DOMContentLoaded', () => {
         section.style.opacity = '0';
         section.style.transform = 'translateY(30px)';
         section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(section);
+        if (observer) {
+            observer.observe(section);
+        } else {
+            // Fallback: show sections if IntersectionObserver is unavailable
+            section.style.opacity = '1';
+            section.style.transform = 'translateY(0)';
+        }
     });
     
     // Observe skill cards
@@ -273,7 +281,12 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(card);
+        if (observer) {
+            observer.observe(card);
+        } else {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
     });
     
     // Observe project cards
@@ -282,7 +295,12 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.opacity = '0';
         card.style.transform = 'translateY(30px)';
         card.style.transition = `opacity 0.6s ease ${index * 0.15}s, transform 0.6s ease ${index * 0.15}s`;
-        observer.observe(card);
+        if (observer) {
+            observer.observe(card);
+        } else {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }
     });
     
     // Set current year in footer

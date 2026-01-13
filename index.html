@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Software Engineer Portfolio - Showcasing projects and skills">
-    <title>Software Engineer Portfolio</title>
+    <title>Damilola Adeniyi | Software Engineer (.NET)</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,54 +11,42 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <h2>Portfolio</h2>
+                <h2>Damilola Adeniyi</h2>
             </div>
-            <button class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="gradient-overlay"></div>
-            <canvas id="particleCanvas"></canvas>
-        </div>
+        <div class="hero-background"></div>
+        <div class="gradient-overlay"></div>
+        <canvas id="particleCanvas"></canvas>
         <div class="hero-content">
-            <div class="hero-greeting">👋 Hello, I'm</div>
-            <h1 class="hero-title">
-                <span class="name-highlight">Software Engineer</span>
-            </h1>
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-title">Damilola <span class="name-highlight">Adeniyi</span></h1>
             <div class="hero-subtitle-wrapper">
-                <p class="hero-subtitle">
-                    <span class="typing-text"></span>
-                    <span class="cursor">|</span>
-                </p>
+                <p class="hero-subtitle">Software Engineer (.NET) | Azure Developer Associate </p>
+                <p class="hero-subtitle"><span class="typing-text"></span><span class="cursor">|</span></p>
             </div>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span class="btn-icon">🚀</span>
-                    View Projects
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span class="btn-icon">✉️</span>
-                    Contact Me
-                </a>
-            </div>
-            <div class="scroll-indicator">
-                <span>↓</span>
+                <a class="btn btn-primary" href="#contact">Contact Me</a>
+                <a class="btn btn-secondary" href="#experience">View Experience</a>
             </div>
         </div>
+        <div class="scroll-indicator">⬇️</div>
     </section>
 
     <!-- About Section -->
@@ -69,50 +56,132 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="profile-picture">
-                        <span class="profile-icon">👨‍💻</span>
+                        <span class="profile-icon">☁️</span>
                     </div>
                     <div class="experience-badge">
                         <div class="badge-content">
-                            <span class="badge-number">5+</span>
-                            <span class="badge-text">Years Experience</span>
+                            <span class="badge-number">4+</span>
+                            <span class="badge-text">Years in Tech</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-text">
-                    <h3 class="about-subtitle">Crafting Digital Experiences</h3>
+                    <h3 class="about-subtitle">Software Engineer (.NET)</h3>
                     <p>
-                        I'm a passionate software engineer with a strong foundation in building 
-                        scalable and efficient applications. I enjoy solving complex problems and 
-                        creating user-friendly experiences that make a difference.
+                        Enthusiastic and industrious Software Engineer with a passion for making a difference and a keen sense of creativity.
+                        I love to learn, solve problems, and deliver reliable .NET solutions.
                     </p>
                     <p>
-                        With expertise in modern technologies and best practices, I strive to deliver 
-                        high-quality code and contribute to innovative projects. I'm always eager to 
-                        learn new technologies and improve my skills.
+                        I work across cloud, APIs, and web apps—combining Azure expertise, .NET Core development, and sound engineering practices
+                        to ship stable, maintainable systems.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item">
+                            <span class="stat-icon">☁️</span>
+                            <div class="stat-info">
+                                <span class="stat-number">Azure</span>
+                                <span class="stat-label">Certified (Fund, AI, Dev)</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">🎓</span>
+                            <div class="stat-info">
+                                <span class="stat-number">HND</span>
+                                <span class="stat-label">Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
                             <span class="stat-icon">💻</span>
                             <div class="stat-info">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">Projects Completed</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">👥</span>
-                            <div class="stat-info">
-                                <span class="stat-number">30+</span>
-                                <span class="stat-label">Happy Clients</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-icon">🏆</span>
-                            <div class="stat-info">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">Awards Won</span>
+                                <span class="stat-number">.NET</span>
+                                <span class="stat-label">Core / API</span>
                             </div>
                         </div>
                     </div>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <h4 style="margin-bottom: 10px;">Contact Details</h4>
+                        <p style="margin: 5px 0; font-size: 0.95em;">
+                            <strong>Phone:</strong> +234 813 417 4312 · +234 814 314 5980
+                        </p>
+                        <p style="margin: 5px 0; font-size: 0.95em;">
+                            <strong>Email:</strong> damilolaadeniyi1@gmail.com
+                        </p>
+                        <p style="margin: 5px 0; font-size: 0.95em;">
+                            <strong>Location:</strong> Lagos State, Nigeria
+                        </p>
+                        <p style="margin: 5px 0; font-size: 0.95em;">
+                            <strong>LinkedIn:</strong> in/Damilola-adeniyi-09208368/
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Software Engineer</h3>
+                            <p class="card-meta">Wragby Business Solutions and Technologies · Oct 2023 – Present</p>
+                        </div>
+                        <span class="card-tag">Full-time</span>
+                    </div>
+                    <p class="card-desc">Software development and engineering excellence across APIs, cloud, and web systems.</p>
+                    <ul class="card-list">
+                        <li>Design, build, and maintain .NET Core services and REST APIs.</li>
+                        <li>Apply Azure services and best practices to ship resilient solutions.</li>
+                        <li>Collaborate in Agile teams, ensuring code quality and reliable delivery.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Software Engineer Intern</h3>
+                            <p class="card-meta">Wragby Business Solutions and Technologies · Sep 2022 – Oct 2023</p>
+                        </div>
+                        <span class="card-tag">Internship</span>
+                    </div>
+                    <p class="card-desc">Hands-on engineering across the software lifecycle with a focus on .NET delivery.</p>
+                    <ul class="card-list">
+                        <li>Supported development and debugging of .NET Core web apps and APIs.</li>
+                        <li>Practiced clean coding, testing, and reviews to improve reliability.</li>
+                        <li>Contributed to performance tuning and deployment readiness.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>ICT Instructor</h3>
+                            <p class="card-meta">Datepalm High School · Oct 2021 – Sep 2022</p>
+                        </div>
+                        <span class="card-tag">Part-time</span>
+                    </div>
+                    <p class="card-desc">Delivered ICT curriculum and practical computing skills to students.</p>
+                    <ul class="card-list">
+                        <li>Prepared engaging lessons and labs to build digital literacy.</li>
+                        <li>Introduced programming and software fundamentals in class.</li>
+                        <li>Maintained lab resources and guided student projects.</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Software Consultant</h3>
+                            <p class="card-meta"> Dec 2020 – Sep 2022</p>
+                        </div>
+                        <span class="card-tag">Consultant</span>
+                    </div>
+                    <p class="card-desc">Deskstop School Management Software consulting and solution delivery for client needs.</p>
+                    <ul class="card-list">
+                        <li>Captured requirements and recommended implementation approaches.</li>
+                        <li>Supported deployment, training, and documentation.</li>
+                        <li>Ensured solutions aligned with client goals and timelines.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -121,52 +190,98 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <div class="category-header">
-                        <span class="category-icon">💻</span>
-                        <h3>Frontend Development</h3>
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">⚡</span>
+                        <h3>Frontend</h3>
                     </div>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>React.js</span>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>JavaScript/TypeScript</span>
-                                <span class="skill-percentage">95%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>HTML/CSS</span>
-                                <span class="skill-percentage">98%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="98"></div>
-                            </div>
-                        </div>
+                    <div class="skill-tags">
+                        <span>.NET Core MVC</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                        <span>Ajax</span>
+                        <span>jQuery</span>
                     </div>
                 </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🛠️</span>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>.NET Core API</span>
+                        <span>ASP.NET</span>
+                        <span>SignalR</span>
+                        <span>C#</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🧠</span>
+                        <h3>Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Azure</span>
+                        <span>Google Cloud</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🗄️</span>
+                        <h3>Database</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>SQL Server</span>
+                        <span>MSSQL</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">💻</span>
+                        <h3>Tools & Others</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>GitHub Copilot</span>
+                        <span>Agile</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <span class="skill-icon">🤝</span>
+                        <h3>Soft Skills</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span>Collaboration</span>
+                        <span>Teaching</span>
+                        <span>Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-categories">
                 <div class="skill-category">
                     <div class="category-header">
                         <span class="category-icon">⚙️</span>
-                        <h3>Backend Development</h3>
+                        <h3>.NET & Development</h3>
                     </div>
                     <div class="skill-bars">
                         <div class="skill-bar">
                             <div class="skill-info">
-                                <span>Node.js</span>
+                                <span>.NET Core API</span>
+                                <span class="skill-percentage">92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-info">
+                                <span>MSSQL</span>
                                 <span class="skill-percentage">88%</span>
                             </div>
                             <div class="progress-bar">
@@ -175,20 +290,11 @@
                         </div>
                         <div class="skill-bar">
                             <div class="skill-info">
-                                <span>Python</span>
-                                <span class="skill-percentage">85%</span>
+                                <span>C# Programming</span>
+                                <span class="skill-percentage">90%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span>SQL/NoSQL</span>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" data-progress="80"></div>
+                                <div class="progress-fill" data-progress="90"></div>
                             </div>
                         </div>
                     </div>
@@ -196,37 +302,76 @@
                 <div class="skill-category">
                     <div class="category-header">
                         <span class="category-icon">☁️</span>
-                        <h3>Cloud & DevOps</h3>
+                        <h3>Professional Skills</h3>
                     </div>
                     <div class="skill-bars">
                         <div class="skill-bar">
                             <div class="skill-info">
-                                <span>AWS</span>
-                                <span class="skill-percentage">82%</span>
+                                <span>Communication Skills</span>
+                                <span class="skill-percentage">95%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" data-progress="82"></div>
+                                <div class="progress-fill" data-progress="95"></div>
                             </div>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-info">
-                                <span>Docker/Kubernetes</span>
-                                <span class="skill-percentage">75%</span>
+                                <span>Team Work</span>
+                                <span class="skill-percentage">95%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" data-progress="75"></div>
+                                <div class="progress-fill" data-progress="95"></div>
                             </div>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-info">
-                                <span>CI/CD Pipelines</span>
-                                <span class="skill-percentage">80%</span>
+                                <span>Time Management</span>
+                                <span class="skill-percentage">90%</span>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" data-progress="80"></div>
+                                <div class="progress-fill" data-progress="90"></div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Higher National Diploma</h3>
+                            <p class="card-meta">Computer Science · Kwara State Polytechnic</p>
+                        </div>
+                        <span class="card-tag">2014 – 2019</span>
+                    </div>
+                    <p class="card-desc">Solid grounding in software development, algorithms, and databases.</p>
+                </div>
+                <div class="education-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Microsoft Certifications</h3>
+                            <p class="card-meta">Azure Fundamentals · Azure AI Fundamentals · Azure Developer Associate</p>
+                        </div>
+                        <span class="card-tag">Completed</span>
+                    </div>
+                    <p class="card-desc">Validated skills across Azure foundations, AI services, and Azure development.</p>
+                </div>
+                <div class="education-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Google Cloud</h3>
+                            <p class="card-meta">Associate Cloud Engineer</p>
+                        </div>
+                        <span class="card-tag">Completed</span>
+                    </div>
+                    <p class="card-desc">Proficiency in deploying and operating solutions on Google Cloud.</p>
                 </div>
             </div>
         </div>
@@ -360,7 +505,7 @@
                 <div class="contact-info-section">
                     <h3 class="contact-subtitle">Let's Build Something Amazing Together</h3>
                     <p class="contact-text">
-                        I'm always interested in hearing about new opportunities and projects. 
+                        I'm always interested in hearing about new opportunities and projects.
                         Whether you have a question or just want to say hi, feel free to reach out!
                     </p>
                     <div class="contact-details">
@@ -368,29 +513,38 @@
                             <span class="contact-icon">📧</span>
                             <div class="detail-content">
                                 <span class="detail-label">Email</span>
-                                <a href="mailto:your.email@example.com">your.email@example.com</a>
+                                <a href="mailto:damilolaadeniyi1@gmail.com">damilolaadeniyi1@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-icon">📞</span>
+                            <div class="detail-content">
+                                <span class="detail-label">Phone</span>
+                                <a href="tel:+2348134174312">+234 813 417 4312</a>
+                                <a href="tel:+2348143145980">+234 814 314 5980</a>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <span class="contact-icon">📍</span>
                             <div class="detail-content">
                                 <span class="detail-label">Location</span>
-                                <span>Available for Remote Work</span>
+                                <span>Lagos State, Nigeria (Open to remote)</span>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <span class="contact-icon">🔗</span>
+                            <div class="detail-content">
+                                <span class="detail-label">LinkedIn</span>
+                                <a href="https://linkedin.com/in/Damilola-adeniyi-09208368/" target="_blank" rel="noopener">linkedin.com/in/Damilola-adeniyi-09208368/</a>
                             </div>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://github.com/yourusername" target="_blank" class="social-link" title="GitHub">
+                        <a href="#" target="_blank" class="social-link" title="GitHub">
                             <span>💻</span>
                         </a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link" title="LinkedIn">
+                        <a href="https://linkedin.com/in/Damilola-adeniyi-09208368/" target="_blank" class="social-link" title="LinkedIn">
                             <span>💼</span>
-                        </a>
-                        <a href="https://twitter.com/yourusername" target="_blank" class="social-link" title="Twitter">
-                            <span>🐦</span>
-                        </a>
-                        <a href="https://stackoverflow.com/users/yourprofile" target="_blank" class="social-link" title="Stack Overflow">
-                            <span>📚</span>
                         </a>
                     </div>
                 </div>
@@ -434,5 +588,6 @@
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
